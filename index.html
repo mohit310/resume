@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="only light">
+<meta name="supported-color-schemes" content="only light">
+<title>Mohit Keswani — Engineering Manager | FinTech · AI/ML</title>
+<meta name="description" content="Engineering Manager with 18+ years building fintech platforms and AI/ML systems across SaaS, media, and capital markets.">
+<meta property="og:title" content="Mohit Keswani — Career Journey">
+<meta property="og:description" content="Engineering Manager with 18+ years building fintech platforms and AI/ML systems. Interactive career timeline.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mohit Keswani — Career Journey">
+<meta name="twitter:description" content="Engineering Manager · FinTech · AI/ML · 18+ years of impact">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%2378B8D0'/><text x='16' y='22' text-anchor='middle' font-size='18' fill='white' font-family='serif' font-weight='bold'>M</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sidebar-w: 270px;
+    --bg: #0e1018;
+    --gold: #78B8D0;
+    --gold-light: #C8E4EE;
+    --gold-dark: #4A8898;
+    --card-bg: rgba(14,12,18,0.92);
+    --card-border: rgba(80,150,170,0.2);
+    --text: #e8e4dc;
+    --text-dim: #9a9488;
+    --text-muted: #6a6058;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { color-scheme: only light; }
+  body { font-family:'Nunito Sans',sans-serif; background:var(--bg); color:var(--text); overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+
+  /* ===== SKILLS SIDEBAR ===== */
+  .sidebar {
+    position:fixed; top:0; left:0; width:var(--sidebar-w); height:100vh;
+    background:linear-gradient(180deg, #12101a 0%, #0e0c14 100%);
+    border-right:1px solid rgba(80,150,170,0.12);
+    z-index:50; overflow-y:auto; padding:28px 20px 40px;
+    scrollbar-width:thin; scrollbar-color:rgba(80,150,170,0.2) transparent;
+  }
+  .sidebar::-webkit-scrollbar { width:4px; }
+  .sidebar::-webkit-scrollbar-thumb { background:rgba(80,150,170,0.25); border-radius:2px; }
+  .sidebar .sid-title {
+    font-family:'Cormorant Garamond',serif; font-weight:700; font-size:1.1rem;
+    color:var(--gold); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:20px;
+    padding-bottom:10px; border-bottom:1px solid rgba(80,150,170,0.15);
+  }
+  .skill-group { margin-bottom:20px; }
+  .skill-group h4 {
+    font-size:0.68rem; color:var(--gold); font-weight:600; letter-spacing:1.5px;
+    text-transform:uppercase; margin-bottom:8px; display:flex; align-items:center; gap:6px;
+  }
+  .skill-group h4 .icon { font-size:0.8rem; }
+  .skill-group .tags { display:flex; flex-wrap:wrap; gap:4px; }
+  .skill-group .tag {
+    font-size:0.6rem; padding:3px 9px; border-radius:4px; font-weight:500;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s; cursor:default;
+    letter-spacing:0.2px;
+  }
+  .skill-group .tag:hover { transform:translateY(-1px); box-shadow:0 2px 8px rgba(0,0,0,0.2); }
+  .tag.fintech { background:rgba(120,184,208,0.12); border:1px solid rgba(120,184,208,0.3); color:#78B8D0; }
+  .tag.eng { background:rgba(100,180,160,0.1); border:1px solid rgba(100,180,160,0.25); color:#7ab8a8; }
+  .tag.ai { background:rgba(160,130,220,0.1); border:1px solid rgba(160,130,220,0.25); color:#b0a0d8; }
+  .tag.lang { background:rgba(200,140,100,0.1); border:1px solid rgba(200,140,100,0.25); color:#c8a080; }
+
+  /* Sidebar education */
+  .sid-edu { margin-top:10px; padding-top:14px; border-top:1px solid rgba(80,150,170,0.12); }
+  .sid-edu h4 { font-size:0.68rem; color:var(--gold); font-weight:600; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px; }
+  .sid-edu p { font-size:0.7rem; color:var(--text-dim); line-height:1.5; }
+  .sid-edu .cert { font-size:0.62rem; color:var(--text-muted); margin-top:2px; padding-left:10px; position:relative; }
+  .sid-edu .cert::before { content:'◇'; position:absolute; left:0; color:var(--gold-dark); font-size:0.5rem; }
+
+  /* ===== MAIN CONTENT ===== */
+  .main { margin-left:var(--sidebar-w); }
+
+  /* Header */
+  .header {
+    text-align:center; padding:45px 20px 15px;
+    background:linear-gradient(to bottom, #0e1018 0%, transparent 100%);
+    position:relative; z-index:10;
+  }
+  .header h1 {
+    font-family:'Cormorant Garamond',serif; font-weight:700;
+    font-size:clamp(2rem,5vw,3.4rem); letter-spacing:3px; margin-bottom:6px;
+    background:linear-gradient(135deg,#ffffff 0%,#78B8D0 50%,#3D7A88 100%);
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  }
+  .header .subtitle {
+    font-size:clamp(0.72rem,1.6vw,0.92rem);
+    color:var(--gold); font-weight:500; letter-spacing:2.5px; text-transform:uppercase; margin-bottom:12px;
+  }
+  .header .contact {
+    display:flex; justify-content:center; flex-wrap:wrap; gap:14px;
+    font-size:0.78rem; color:var(--text-muted);
+  }
+  .header .contact .sep { color:var(--gold-dark); }
+  .header .summary-text {
+    max-width:720px; margin:14px auto 0; font-size:0.84rem; line-height:1.6;
+    color:var(--text-dim); font-weight:300;
+  }
+  .header .click-hint {
+    margin-top:14px; font-size:0.7rem; color:rgba(120,184,208,0.45);
+    font-style:italic; letter-spacing:0.5px;
+    display:flex; align-items:center; justify-content:center; gap:6px;
+  }
+  .header .click-hint::before, .header .click-hint::after {
+    content:''; width:30px; height:1px; background:rgba(120,184,208,0.15);
+  }
+
+  
+
+  /* ===== SCENE ===== */
+  .scene { position:relative; width:100%; height:3650px; }
+  .scene-sky {
+    position:absolute; inset:0;
+    background:linear-gradient(to bottom,
+      #0e1018 0%, #141830 5%, #1e2858 10%, #2a4080 16%,
+      #4a7ab0 24%, #6aa8c8 30%, #88c8d8 36%,
+      #70b8a0 44%, #58a078 50%, #408860 56%,
+      #387850 62%, #306840 68%, #285a38 74%,
+      #225030 80%, #1e4828 86%, #1a3e22 92%, #16341c 100%
+    );
+  }
+
+  .scene svg.landscape {
+    position:absolute; top:0; left:0; width:100%; height:100%; z-index:2;
+  }
+
+  /* ===== STOP MARKERS ===== */
+  .stop-marker {
+    position:absolute; z-index:8; cursor:pointer;
+    display:flex; align-items:center; gap:12px;
+    transition: transform 0.35s cubic-bezier(0.25,0.46,0.45,0.94);
+  }
+  .stop-marker:hover { transform:translateY(-2px); }
+  .stop-marker.right { flex-direction:row; }
+  .stop-marker.left { flex-direction:row-reverse; }
+
+  .stop-marker .beacon {
+    width:clamp(42px, 5vw, 52px); height:clamp(42px, 5vw, 52px); border-radius:50%; flex-shrink:0;
+    background:radial-gradient(circle at 38% 32%, #E8F4F8, #78B8D0 45%, #4A8898 80%);
+    box-shadow:0 0 14px rgba(120,184,208,0.5), 0 0 40px rgba(120,184,208,0.12);
+    display:flex; align-items:center; justify-content:center;
+    font-size:clamp(0.75rem, 1vw, 0.9rem); color:#0e1018; font-weight:700;
+    transition: box-shadow 0.35s, transform 0.35s;
+    border:2px solid rgba(200,228,238,0.3);
+  }
+  .stop-marker:hover .beacon {
+    box-shadow:0 0 22px rgba(120,184,208,0.75), 0 0 60px rgba(120,184,208,0.25);
+    transform:scale(1.08);
+  }
+
+  .stop-marker .mini-card {
+    background:linear-gradient(135deg, rgba(28,24,18,0.94) 0%, rgba(20,18,14,0.96) 100%);
+    border:1px solid rgba(100,165,185,0.18);
+    border-left:3px solid rgba(120,184,208,0.6);
+    border-radius:8px 12px 12px 8px;
+    padding:clamp(16px, 2vw, 24px) clamp(18px, 2.5vw, 28px) clamp(14px, 1.8vw, 20px);
+    backdrop-filter:blur(14px);
+    box-shadow:0 8px 28px rgba(0,0,0,0.45), inset 0 1px 0 rgba(200,228,238,0.04);
+    max-width:clamp(300px, 35vw, 420px);
+    transition: all 0.35s cubic-bezier(0.25,0.46,0.45,0.94);
+  }
+  .stop-marker:hover .mini-card {
+    border-color:rgba(120,184,208,0.35);
+    border-left-color:rgba(120,184,208,0.9);
+    box-shadow:0 12px 36px rgba(0,0,0,0.55), 0 0 20px rgba(120,184,208,0.06), inset 0 1px 0 rgba(200,228,238,0.06);
+    background:linear-gradient(135deg, rgba(34,28,20,0.96) 0%, rgba(24,20,16,0.97) 100%);
+  }
+  .mini-card .mc-company {
+    font-family:'Cormorant Garamond',serif; font-weight:700;
+    font-size:clamp(1.05rem, 1.4vw, 1.3rem); color:#fff; letter-spacing:0.3px;
+  }
+  .mini-card .mc-role {
+    font-size:clamp(0.76rem, 1vw, 0.9rem); color:#90C8D8; font-weight:600;
+    margin-top:2px; letter-spacing:0.2px;
+  }
+  .mini-card .mc-dates {
+    font-family:'JetBrains Mono',monospace;
+    font-size:clamp(0.62rem, 0.8vw, 0.72rem); color:#8a8078; margin-top:5px;
+    padding-top:5px; border-top:1px solid rgba(80,150,170,0.08);
+  }
+  .mini-card .mc-tap {
+    font-size:clamp(0.6rem, 0.75vw, 0.68rem); color:rgba(120,184,208,0.5); margin-top:7px;
+    font-style:italic; transition:color 0.3s;
+  }
+  .stop-marker:hover .mini-card .mc-tap { color:rgba(120,184,208,0.8); }
+
+  .now-badge {
+    display:inline-block;
+    background:linear-gradient(135deg,#5A9AAA,#3D7A88);
+    color:#E8F4F8; font-family:'JetBrains Mono',monospace;
+    font-size:0.46rem; font-weight:700; padding:2px 8px; border-radius:4px;
+    letter-spacing:1.2px; text-transform:uppercase; margin-left:6px; vertical-align:middle;
+    box-shadow:0 1px 4px rgba(70,136,152,0.3);
+    animation:glow 3s ease-in-out infinite;
+  }
+  @keyframes glow { 0%,100%{box-shadow:0 1px 4px rgba(70,136,152,0.3)} 50%{box-shadow:0 2px 12px rgba(120,184,208,0.5)} }
+
+  /* ===== DETAIL OVERLAY ===== */
+  .overlay {
+    position:fixed; inset:0; z-index:100;
+    background:rgba(6,4,10,0.75); backdrop-filter:blur(8px);
+    display:none; align-items:center; justify-content:center;
+    opacity:0; transition:opacity 0.35s ease;
+  }
+  .overlay.open { display:flex; opacity:1; }
+  .detail-panel {
+    background:linear-gradient(160deg, #1e1a14 0%, #14120e 40%, #100e0a 100%);
+    border:1px solid rgba(100,165,185,0.15);
+    border-top:2px solid rgba(120,184,208,0.5);
+    border-radius:4px 4px 14px 14px;
+    padding:0; max-width:clamp(500px, 60vw, 820px); width:94%; max-height:88vh; overflow-y:auto;
+    box-shadow:0 24px 80px rgba(0,0,0,0.65), 0 0 40px rgba(120,184,208,0.04);
+    transform:translateY(24px) scale(0.98); transition:transform 0.35s cubic-bezier(0.25,0.46,0.45,0.94);
+    scrollbar-width:thin; scrollbar-color:rgba(80,150,170,0.2) transparent;
+  }
+  .overlay.open .detail-panel { transform:translateY(0) scale(1); }
+
+  .detail-panel .dp-header {
+    padding:clamp(24px, 3.5vw, 40px) clamp(28px, 4vw, 48px) clamp(18px, 2.5vw, 28px);
+    background:linear-gradient(180deg, rgba(120,184,208,0.06) 0%, transparent 100%);
+    border-bottom:1px solid rgba(80,150,170,0.1);
+    position:relative;
+  }
+  .detail-panel .close-btn {
+    position:absolute; top:clamp(16px, 2vw, 24px); right:clamp(16px, 2vw, 24px);
+    background:rgba(120,184,208,0.06); border:1px solid rgba(80,150,170,0.15);
+    color:#78B8D0; font-size:clamp(1rem, 1.3vw, 1.2rem); cursor:pointer;
+    width:clamp(32px, 3.5vw, 40px); height:clamp(32px, 3.5vw, 40px);
+    border-radius:8px; display:flex; align-items:center; justify-content:center;
+    transition:all 0.2s;
+  }
+  .detail-panel .close-btn:hover { background:rgba(120,184,208,0.12); border-color:rgba(80,150,170,0.3); }
+  .detail-panel .dp-company {
+    font-family:'Cormorant Garamond',serif; font-weight:700;
+    font-size:clamp(1.6rem, 2.5vw, 2.2rem);
+    color:#fff; margin-bottom:5px; letter-spacing:0.5px;
+  }
+  .detail-panel .dp-role {
+    font-size:clamp(1rem, 1.4vw, 1.2rem); color:#90C8D8; font-weight:600;
+    margin-bottom:6px; letter-spacing:0.2px;
+  }
+  .detail-panel .dp-dates {
+    font-family:'JetBrains Mono',monospace;
+    font-size:clamp(0.78rem, 1vw, 0.9rem); color:#7a7068;
+  }
+
+  .detail-panel .dp-body {
+    padding:clamp(20px, 3vw, 32px) clamp(28px, 4vw, 48px) clamp(24px, 3vw, 36px);
+  }
+  .detail-panel .dp-desc {
+    list-style:none; padding:0; margin-bottom:24px;
+  }
+  .detail-panel .dp-desc li {
+    font-size:clamp(0.9rem, 1.15vw, 1.05rem); color:#c8c0b4; line-height:1.7;
+    padding:clamp(8px, 1vw, 12px) 0 clamp(8px, 1vw, 12px) clamp(18px, 2vw, 24px);
+    position:relative;
+    border-bottom:1px solid rgba(80,150,170,0.05);
+  }
+  .detail-panel .dp-desc li:last-child { border-bottom:none; }
+  .detail-panel .dp-desc li::before {
+    content:''; position:absolute; left:0; top:clamp(16px, 1.8vw, 22px);
+    width:7px; height:7px; border-radius:50%;
+    background:rgba(120,184,208,0.5);
+  }
+  .detail-panel .dp-skills-label {
+    font-size:clamp(0.7rem, 0.9vw, 0.8rem); color:#8a7a68; font-weight:600;
+    letter-spacing:1.5px; text-transform:uppercase; margin-bottom:10px;
+  }
+  .detail-panel .dp-skills { display:flex; flex-wrap:wrap; gap:clamp(6px, 0.8vw, 10px); }
+  .detail-panel .dp-skills .sk {
+    font-size:clamp(0.74rem, 0.95vw, 0.88rem); padding:clamp(5px, 0.6vw, 8px) clamp(12px, 1.5vw, 18px);
+    border-radius:6px; font-weight:500;
+    background:linear-gradient(135deg, rgba(120,184,208,0.08) 0%, rgba(120,184,208,0.04) 100%);
+    border:1px solid rgba(120,184,208,0.2); color:#78B8D0;
+    transition:all 0.2s;
+  }
+  .detail-panel .dp-skills .sk:hover {
+    background:rgba(120,184,208,0.12); border-color:rgba(120,184,208,0.35);
+  }
+
+  /* ===== FOOTER ===== */
+  .footer-section {
+    position:relative; z-index:10; padding:20px 30px 50px;
+    text-align:center;
+  }
+  .footer-section p { font-size:0.72rem; color:var(--text-muted); }
+
+  /* ===== RESPONSIVE ===== */
+  @media (min-width:1400px) {
+    .stop-marker .mini-card { max-width:460px; padding:26px 32px 22px; }
+    .mini-card .mc-company { font-size:1.35rem; }
+    .mini-card .mc-role { font-size:0.95rem; }
+    .mini-card .mc-dates { font-size:0.75rem; }
+    .stop-marker .beacon { width:56px; height:56px; font-size:0.95rem; }
+  }
+  @media (max-width:1100px) {
+    .stop-marker .mini-card { max-width:340px; }
+  }
+  @media (max-width:900px) {
+    .sidebar { display:none; }
+    .main { margin-left:0; }
+    .stop-marker .mini-card { max-width:clamp(280px, 42vw, 380px); }
+  }
+  @media (max-width:600px) {
+    .stop-marker .mini-card { max-width:60vw; padding:14px 16px 12px; }
+    .mini-card .mc-company { font-size:0.95rem; }
+    .mini-card .mc-role { font-size:0.72rem; }
+    .stop-marker .beacon { width:36px; height:36px; }
+  }
+
+  /* Waterfall animation */
+  @keyframes waterfall {
+    0% { transform:translateY(0); opacity:0.7; }
+    100% { transform:translateY(30px); opacity:0; }
+  }
+  .wf-drop { animation:waterfall 1.2s linear infinite; }
+  .wf-drop:nth-child(2) { animation-delay:0.3s; }
+  .wf-drop:nth-child(3) { animation-delay:0.6s; }
+  .wf-drop:nth-child(4) { animation-delay:0.9s; }
+
+  /* Smoke animation */
+  @keyframes smoke {
+    0% { transform:translateY(0) scale(1); opacity:0.35; }
+    100% { transform:translateY(-25px) scale(1.8); opacity:0; }
+  }
+  .smoke-puff { animation:smoke 3s ease-out infinite; }
+  .smoke-puff:nth-child(2) { animation-delay:1s; }
+  .smoke-puff:nth-child(3) { animation-delay:2s; }
+
+  /* Bird animation */
+  @keyframes birdFly {
+    0% { transform:translateX(0); }
+    100% { transform:translateX(400px); }
+  }
+  .bird-group { animation:birdFly 20s linear infinite; }
+
+  /* Sun rays */
+  @keyframes sunPulse {
+    0%,100% { opacity:0.3; }
+    50% { opacity:0.55; }
+  }
+  
+</style>
+</head>
+<body>
+
+<!-- ===== SKILLS SIDEBAR ===== -->
+<aside class="sidebar">
+  <div class="sid-title">Skills &amp; Expertise</div>
+
+  <div class="skill-group">
+    <h4><span class="icon">◈</span> FinTech &amp; Domain</h4>
+    <div class="tags">
+      <span class="tag fintech">Pricing &amp; Billing</span>
+      <span class="tag fintech">Monetization</span>
+      <span class="tag fintech">Revenue Leakage</span>
+      <span class="tag fintech">Collections</span>
+      <span class="tag fintech">Payments Ops</span>
+      <span class="tag fintech">Invoicing</span>
+      <span class="tag fintech">ACH Workflows</span>
+      <span class="tag fintech">Reconciliation</span>
+      <span class="tag fintech">General Ledger</span>
+      <span class="tag fintech">Capital Markets</span>
+    </div>
+  </div>
+
+  <div class="skill-group">
+    <h4><span class="icon">⚙</span> Engineering</h4>
+    <div class="tags">
+      <span class="tag eng">Distributed Systems</span>
+      <span class="tag eng">Microservices</span>
+      <span class="tag eng">Event-Driven</span>
+      <span class="tag eng">REST / GraphQL</span>
+      <span class="tag eng">Data Pipelines</span>
+      <span class="tag eng">A/B Testing</span>
+      <span class="tag eng">Scalability</span>
+      <span class="tag eng">Re-architecture</span>
+      <span class="tag eng">Incident Response</span>
+      <span class="tag eng">Observability</span>
+    </div>
+  </div>
+
+  <div class="skill-group">
+    <h4><span class="icon">◎</span> AI / ML</h4>
+    <div class="tags">
+      <span class="tag ai">Recommendation Systems</span>
+      <span class="tag ai">Semantic Search</span>
+      <span class="tag ai">NLP / NER</span>
+      <span class="tag ai">Embeddings</span>
+      <span class="tag ai">Vector Search</span>
+      <span class="tag ai">HNSW / ANN</span>
+      <span class="tag ai">RRF / Ranking</span>
+      <span class="tag ai">Two-Tower Retrieval</span>
+      <span class="tag ai">Multi-Armed Bandits</span>
+      <span class="tag ai">Anomaly Detection</span>
+      <span class="tag ai">LLM / RAG</span>
+      <span class="tag ai">Prompt Orchestration</span>
+      <span class="tag ai">LLM Evaluation</span>
+    </div>
+  </div>
+
+  <div class="skill-group">
+    <h4><span class="icon">☁</span> Cloud &amp; Languages</h4>
+    <div class="tags">
+      <span class="tag lang">AWS</span>
+      <span class="tag lang">Terraform</span>
+      <span class="tag lang">Java</span>
+      <span class="tag lang">Kotlin</span>
+      <span class="tag lang">Python</span>
+      <span class="tag lang">Go</span>
+      <span class="tag lang">Ruby</span>
+      <span class="tag lang">C++</span>
+      <span class="tag lang">Rust</span>
+    </div>
+  </div>
+
+  <div class="sid-edu">
+    <h4>Education</h4>
+    <p>B.S. Computer Engineering<br>University of Mumbai, India</p>
+  </div>
+  <div class="sid-edu" style="border-top:none; padding-top:8px; margin-top:4px;">
+    <h4>Certifications</h4>
+    <div class="cert">AWS Solutions Architect — Associate</div>
+    <div class="cert">Supervised ML: Regression &amp; Classification</div>
+    <div class="cert">Certified SAFe 5 Scrum Master</div>
+  </div>
+</aside>
+
+<!-- ===== MAIN ===== -->
+<div class="main">
+
+  <header class="header">
+    <h1>MOHIT KESWANI</h1>
+    <div class="subtitle">Engineering Manager — FinTech · AI/ML · Intelligent Systems</div>
+    <div class="contact">
+      <span>Hasbrouck Heights, NJ</span><span class="sep">·</span>
+      <span>+1 201-450-3109</span><span class="sep">·</span>
+      <span>mohit.keswani@gmail.com</span>
+    </div>
+    <p class="summary-text">Hands-on engineering leader with 18+ years building revenue-critical fintech platforms and applied AI/ML systems across SaaS, media, and capital markets.</p>
+    <p class="click-hint">✦ Click any milestone to explore the full story</p>
+  </header>
+
+  <!-- ===== SCENE ===== -->
+  <div class="scene">
+    <div class="scene-sky"></div>
+
+
+
+    <svg class="landscape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 3500" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="snowPeak" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#f0eee8" stop-opacity="0.95"/>
+          <stop offset="25%" stop-color="#b0c0d0"/>
+          <stop offset="60%" stop-color="#6080a0"/>
+          <stop offset="100%" stop-color="#3a5070"/>
+        </linearGradient>
+        <linearGradient id="mtn2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#7090a8"/><stop offset="100%" stop-color="#3a5068"/>
+        </linearGradient>
+        <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#4a8a58"/><stop offset="100%" stop-color="#2a6038"/>
+        </linearGradient>
+        <linearGradient id="hillDk" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#387048"/><stop offset="100%" stop-color="#1e4828"/>
+        </linearGradient>
+        <linearGradient id="river" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#4aa0c8" stop-opacity="0.5"/>
+          <stop offset="50%" stop-color="#6ab8d8" stop-opacity="0.7"/>
+          <stop offset="100%" stop-color="#4aa0c8" stop-opacity="0.5"/>
+        </linearGradient>
+        <linearGradient id="stoneTrail" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#a09080"/><stop offset="100%" stop-color="#706050"/>
+        </linearGradient>
+        <!-- Sun rendered via CSS - gradients below are for terrain only -->
+        <filter id="blur1"><feGaussianBlur stdDeviation="6"/></filter>
+        <filter id="blur2"><feGaussianBlur stdDeviation="12"/></filter>
+        <filter id="softGlow"><feGaussianBlur stdDeviation="3"/></filter>
+        <pattern id="cobble" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(5)">
+          <rect width="16" height="16" fill="rgba(140,120,90,0.35)"/>
+          <rect x="1" y="1" width="6" height="6" rx="1.5" fill="rgba(180,160,120,0.3)" stroke="rgba(100,80,55,0.25)" stroke-width="0.4"/>
+          <rect x="8" y="1" width="7" height="5" rx="1.5" fill="rgba(165,145,110,0.25)" stroke="rgba(100,80,55,0.2)" stroke-width="0.4"/>
+          <rect x="1" y="9" width="5" height="6" rx="1.5" fill="rgba(170,150,115,0.28)" stroke="rgba(100,80,55,0.22)" stroke-width="0.4"/>
+          <rect x="7" y="8" width="8" height="7" rx="1.5" fill="rgba(160,140,105,0.25)" stroke="rgba(100,80,55,0.2)" stroke-width="0.4"/>
+        </pattern>
+      </defs>
+
+      <!-- Sun is rendered as CSS element outside SVG for perfect geometry -->
+
+      <!-- ===== BIRDS ===== -->
+      <g class="bird-group" opacity="0.4">
+        <path d="M120,200 Q126,194 132,200" fill="none" stroke="#4a6080" stroke-width="1.5"/>
+        <path d="M145,195 Q150,190 155,195" fill="none" stroke="#4a6080" stroke-width="1.2"/>
+        <path d="M160,205 Q165,199 170,205" fill="none" stroke="#4a6080" stroke-width="1.3"/>
+      </g>
+      <g opacity="0.3">
+        <path d="M400,160 Q405,155 410,160" fill="none" stroke="#5a7090" stroke-width="1.2"/>
+        <path d="M420,155 Q424,150 428,155" fill="none" stroke="#5a7090" stroke-width="1"/>
+      </g>
+
+      <!-- ===== SNOW MOUNTAINS ===== -->
+      <path d="M0,550 L100,300 200,420 320,220 440,360 520,180 640,340 760,260 880,400 960,320 1000,420 1000,700 0,700Z" fill="url(#snowPeak)" opacity="0.85"/>
+      <path d="M0,620 L80,440 180,540 310,380 460,500 580,350 700,480 820,370 940,500 1000,440 1000,750 0,750Z" fill="url(#mtn2)" opacity="0.85"/>
+
+      <!-- ===== WATERFALL ===== -->
+      <g>
+        <!-- Rock face -->
+        <path d="M180,400 L195,400 195,520 175,520Z" fill="#5a6878" opacity="0.6"/>
+        <!-- Water streams -->
+        <rect class="wf-drop" x="182" y="405" width="3" height="20" rx="1.5" fill="rgba(200,230,255,0.7)"/>
+        <rect class="wf-drop" x="186" y="410" width="2.5" height="18" rx="1.2" fill="rgba(200,230,255,0.6)"/>
+        <rect class="wf-drop" x="189" y="408" width="2" height="22" rx="1" fill="rgba(200,230,255,0.5)"/>
+        <rect class="wf-drop" x="184" y="415" width="2.5" height="16" rx="1.2" fill="rgba(200,230,255,0.55)"/>
+        <!-- Splash -->
+        <ellipse cx="186" cy="525" rx="14" ry="4" fill="rgba(200,230,255,0.25)"/>
+      </g>
+
+      <!-- ===== MIST ===== -->
+      <rect x="0" y="680" width="1000" height="80" fill="rgba(180,200,220,0.12)" filter="url(#blur2)"/>
+
+      <!-- ===== GREEN HILLS ===== -->
+      <path d="M0,800 Q120,720 250,790 T500,750 T750,800 T1000,770 L1000,950 0,950Z" fill="url(#hill)" opacity="0.85"/>
+
+      <!-- ===== TREES (Pines + Round) ===== -->
+      <g opacity="0.75">
+        <!-- Pine trees -->
+        <polygon points="70,780 80,720 90,780" fill="#2a6838"/>
+        <polygon points="72,760 80,710 88,760" fill="#308040"/>
+        <rect x="78" y="780" width="4" height="10" fill="#5a4030"/>
+
+        <polygon points="110,790 120,735 130,790" fill="#286030"/>
+        <polygon points="112,770 120,725 128,770" fill="#2c7038"/>
+        <rect x="118" y="790" width="4" height="8" fill="#5a4030"/>
+
+        <polygon points="880,770 892,710 904,770" fill="#2a6838"/>
+        <polygon points="882,750 892,700 902,750" fill="#308040"/>
+        <rect x="890" y="770" width="4" height="10" fill="#5a4030"/>
+
+        <polygon points="920,785 930,740 940,785" fill="#286030"/>
+        <rect x="928" y="785" width="4" height="8" fill="#5a4030"/>
+
+        <!-- Round trees -->
+        <rect x="158" y="775" width="5" height="14" fill="#5a4030"/>
+        <circle cx="160" cy="768" r="14" fill="#3a7a48"/>
+        <circle cx="160" cy="764" r="10" fill="#48884a"/>
+
+        <rect x="848" y="780" width="5" height="12" fill="#5a4030"/>
+        <circle cx="850" cy="773" r="12" fill="#3a7a48"/>
+      </g>
+
+      <!-- More hills -->
+      <path d="M0,930 Q180,870 360,930 T720,890 T1000,940 L1000,1120 0,1120Z" fill="url(#hillDk)" opacity="0.85"/>
+
+      <!-- ===== VILLAGE HOUSES ===== -->
+      <!-- House 1 (left side) -->
+      <g transform="translate(60,880)">
+        <rect x="0" y="10" width="35" height="28" rx="1" fill="#8a6a4a"/>
+        <polygon points="-4,10 17.5,-8 39,10" fill="#a04030"/>
+        <rect x="8" y="18" width="8" height="8" fill="#ffe880" opacity="0.7"/>
+        <rect x="20" y="18" width="8" height="8" fill="#ffe880" opacity="0.5"/>
+        <rect x="14" y="28" width="7" height="10" fill="#5a4030"/>
+        <!-- Chimney -->
+        <rect x="28" y="-2" width="6" height="14" fill="#6a5040"/>
+        <!-- Smoke -->
+        <circle class="smoke-puff" cx="31" cy="-6" r="3" fill="rgba(180,170,160,0.3)"/>
+        <circle class="smoke-puff" cx="33" cy="-10" r="2.5" fill="rgba(180,170,160,0.25)"/>
+        <circle class="smoke-puff" cx="30" cy="-14" r="3.5" fill="rgba(180,170,160,0.2)"/>
+      </g>
+
+      <!-- House 2 (right side) -->
+      <g transform="translate(860,870)">
+        <rect x="0" y="10" width="40" height="30" rx="1" fill="#7a6040"/>
+        <polygon points="-3,10 20,-10 43,10" fill="#b04a38"/>
+        <rect x="6" y="17" width="9" height="9" fill="#ffe880" opacity="0.6"/>
+        <rect x="22" y="17" width="9" height="9" fill="#ffe880" opacity="0.7"/>
+        <rect x="15" y="28" width="8" height="12" fill="#4a3528"/>
+        <rect x="32" y="0" width="5" height="12" fill="#5a4535"/>
+        <circle class="smoke-puff" cx="35" cy="-4" r="2.8" fill="rgba(180,170,160,0.3)"/>
+        <circle class="smoke-puff" cx="37" cy="-8" r="2.5" fill="rgba(180,170,160,0.25)"/>
+      </g>
+
+      <!-- House 3 (mid-left) -->
+      <g transform="translate(140,910)">
+        <rect x="0" y="8" width="30" height="24" rx="1" fill="#9a7a5a"/>
+        <polygon points="-3,8 15,-6 33,8" fill="#904838"/>
+        <rect x="6" y="14" width="7" height="7" fill="#ffe880" opacity="0.6"/>
+        <rect x="17" y="14" width="7" height="7" fill="#ffe880" opacity="0.55"/>
+        <rect x="11" y="24" width="6" height="8" fill="#5a4030"/>
+      </g>
+
+      <!-- ===== FLOWERS / BUSHES ===== -->
+      <g opacity="0.7">
+        <!-- Bushes -->
+        <ellipse cx="200" cy="940" rx="12" ry="8" fill="#2a6838"/>
+        <ellipse cx="750" cy="930" rx="14" ry="9" fill="#2a6838"/>
+        <ellipse cx="400" cy="945" rx="10" ry="7" fill="#286035"/>
+        <!-- Flowers -->
+        <circle cx="220" cy="935" r="2.5" fill="#e86080"/>
+        <circle cx="225" cy="938" r="2" fill="#f0a040"/>
+        <circle cx="740" cy="925" r="2.5" fill="#e0e040"/>
+        <circle cx="745" cy="928" r="2" fill="#e86080"/>
+        <circle cx="395" cy="940" r="2" fill="#f0a040"/>
+        <circle cx="405" cy="938" r="2.5" fill="#e0e040"/>
+        <circle cx="610" cy="942" r="2" fill="#e86080"/>
+        <circle cx="320" cy="935" r="2.5" fill="#a080e0"/>
+      </g>
+
+      <!-- ===== RIVER ===== -->
+      <path d="M180,530 Q200,560 220,600 Q260,700 300,800 Q340,900 320,1000 Q300,1100 280,1200 Q260,1350 300,1500 Q340,1600 320,1700 Q300,1800 280,1900 Q260,2050 300,2200 Q340,2300 320,2400 Q300,2600 280,2800 Q260,3000 300,3200 L300,3500"
+        fill="none" stroke="url(#river)" stroke-width="14" stroke-linecap="round" opacity="0.5"/>
+      <path d="M180,530 Q200,560 220,600 Q260,700 300,800 Q340,900 320,1000 Q300,1100 280,1200 Q260,1350 300,1500"
+        fill="none" stroke="rgba(150,210,240,0.15)" stroke-width="6" stroke-linecap="round"/>
+
+      <!-- More terrain + trees continuing down -->
+      <path d="M0,1100 Q200,1050 400,1100 T800,1060 T1000,1110 L1000,1320 0,1320Z" fill="#306840" opacity="0.8"/>
+      <g opacity="0.6">
+        <polygon points="440,1080 450,1030 460,1080" fill="#286030"/>
+        <polygon points="560,1070 572,1010 584,1070" fill="#2a6838"/>
+        <circle cx="620" cy="1068" r="11" fill="#3a7848"/>
+        <rect x="618" y="1075" width="4" height="10" fill="#5a4030"/>
+        <polygon points="700,1085 710,1040 720,1085" fill="#286030"/>
+      </g>
+      <path d="M0,1300 Q250,1240 500,1300 T1000,1260 L1000,1520 0,1520Z" fill="#2a5a38" opacity="0.8"/>
+
+      <!-- House cluster mid -->
+      <g transform="translate(780,1240)">
+        <rect x="0" y="8" width="32" height="25" rx="1" fill="#8a6a4a"/>
+        <polygon points="-3,8 16,-7 35,8" fill="#a04838"/>
+        <rect x="6" y="14" width="7" height="7" fill="#ffe880" opacity="0.55"/>
+        <rect x="19" y="14" width="7" height="7" fill="#ffe880" opacity="0.6"/>
+      </g>
+      <g transform="translate(820,1250)">
+        <rect x="0" y="6" width="28" height="22" rx="1" fill="#7a5a3a"/>
+        <polygon points="-2,6 14,-8 30,6" fill="#904838"/>
+        <rect x="8" y="12" width="6" height="6" fill="#ffe880" opacity="0.5"/>
+      </g>
+
+      <!-- Continue terrain -->
+      <path d="M0,1500 Q200,1440 400,1500 T800,1460 T1000,1510 L1000,1740 0,1740Z" fill="#245030" opacity="0.8"/>
+      <path d="M0,1720 Q300,1660 600,1720 T1000,1680 L1000,1960 0,1960Z" fill="#1e4828" opacity="0.8"/>
+
+      <!-- More trees, bushes, flowers scattered -->
+      <g opacity="0.55">
+        <polygon points="150,1500 162,1440 174,1500" fill="#2a6838"/>
+        <polygon points="350,1490 360,1440 370,1490" fill="#286030"/>
+        <circle cx="500" cy="1485" r="10" fill="#307040"/>
+        <rect x="498" y="1492" width="4" height="8" fill="#5a4030"/>
+        <polygon points="650,1500 660,1450 670,1500" fill="#2a6838"/>
+        <circle cx="820" cy="1490" r="9" fill="#307040"/>
+      </g>
+      <g opacity="0.6">
+        <circle cx="180" cy="1495" r="2" fill="#e86080"/>
+        <circle cx="365" cy="1488" r="2.5" fill="#f0a040"/>
+        <circle cx="510" cy="1495" r="2" fill="#a080e0"/>
+        <circle cx="660" cy="1498" r="2" fill="#e0e040"/>
+      </g>
+
+      <!-- Houses deeper -->
+      <g transform="translate(100,1680)">
+        <rect x="0" y="8" width="30" height="22" rx="1" fill="#7a6045"/>
+        <polygon points="-2,8 15,-6 32,8" fill="#904030"/>
+        <rect x="7" y="14" width="6" height="6" fill="#ffe880" opacity="0.5"/>
+        <rect x="17" y="14" width="6" height="6" fill="#ffe880" opacity="0.45"/>
+      </g>
+
+      <path d="M0,1940 Q200,1880 400,1940 T800,1900 T1000,1950 L1000,2200 0,2200Z" fill="#1a4022" opacity="0.8"/>
+      <path d="M0,2180 Q300,2120 600,2180 T1000,2140 L1000,2440 0,2440Z" fill="#164020" opacity="0.8"/>
+      <rect x="0" y="2100" width="1000" height="60" fill="rgba(30,60,35,0.2)" filter="url(#blur2)"/>
+
+      <g opacity="0.5">
+        <polygon points="480,1940 490,1890 500,1940" fill="#1e4828"/>
+        <polygon points="720,1930 730,1880 740,1930" fill="#1e4828"/>
+        <circle cx="560" cy="1935" r="8" fill="#286838"/>
+        <circle cx="850" cy="1925" r="9" fill="#286838"/>
+      </g>
+
+      <!-- House -->
+      <g transform="translate(860,1900)">
+        <rect x="0" y="8" width="34" height="24" rx="1" fill="#8a6848"/>
+        <polygon points="-3,8 17,-7 37,8" fill="#a04535"/>
+        <rect x="8" y="14" width="7" height="7" fill="#ffe880" opacity="0.5"/>
+        <rect x="20" y="14" width="7" height="7" fill="#ffe880" opacity="0.55"/>
+      </g>
+
+      <path d="M0,2420 Q250,2360 500,2420 T1000,2380 L1000,2680 0,2680Z" fill="#143a1c" opacity="0.8"/>
+      <path d="M0,2660 Q200,2600 450,2660 T900,2620 T1000,2670 L1000,2950 0,2950Z" fill="#103218" opacity="0.85"/>
+      <path d="M0,2930 Q300,2880 600,2930 T1000,2890 L1000,3200 0,3200Z" fill="#0e2a14" opacity="0.85"/>
+      <path d="M0,3180 Q250,3140 500,3180 T1000,3140 L1000,3500 0,3500Z" fill="#0c2410" opacity="0.9"/>
+
+      <!-- Scattered elements lower -->
+      <g opacity="0.4">
+        <polygon points="200,2420 210,2380 220,2420" fill="#143a1c"/>
+        <polygon points="600,2410 610,2370 620,2410" fill="#143a1c"/>
+        <polygon points="400,2660 410,2620 420,2660" fill="#0e2a14"/>
+        <polygon points="700,2650 710,2610 720,2650" fill="#0e2a14"/>
+      </g>
+      <g opacity="0.45">
+        <circle cx="250" cy="2418" r="2" fill="#e86080"/>
+        <circle cx="620" cy="2408" r="2" fill="#f0a040"/>
+        <circle cx="420" cy="2658" r="2" fill="#a080e0"/>
+      </g>
+
+      <!-- House bottom area -->
+      <g transform="translate(130,2620)">
+        <rect x="0" y="6" width="28" height="20" rx="1" fill="#6a5038"/>
+        <polygon points="-2,6 14,-6 30,6" fill="#804030"/>
+        <rect x="7" y="11" width="5" height="5" fill="#ffe880" opacity="0.4"/>
+        <rect x="16" y="11" width="5" height="5" fill="#ffe880" opacity="0.35"/>
+      </g>
+      <g transform="translate(780,2870)">
+        <rect x="0" y="6" width="30" height="22" rx="1" fill="#5a4530"/>
+        <polygon points="-2,6 15,-7 32,6" fill="#703828"/>
+        <rect x="8" y="12" width="6" height="6" fill="#ffe880" opacity="0.35"/>
+      </g>
+
+      <!-- ============================================ -->
+      <!-- COBBLESTONE WINDING TRAIL                    -->
+      <!-- ============================================ -->
+      <path d="
+        M 500,880
+        C 380,1000 340,1100 360,1200
+        C 390,1320 680,1370 700,1510
+        C 720,1650 370,1740 350,1870
+        C 330,2000 680,2070 700,2200
+        C 720,2340 350,2420 330,2560
+        C 310,2700 680,2770 700,2900
+        C 720,3020 410,3100 390,3200
+        C 370,3280 480,3320 490,3380
+      " fill="none" stroke="rgba(90,70,45,0.5)" stroke-width="24" stroke-linecap="round"/>
+
+      <!-- Cobblestone texture -->
+      <path d="
+        M 500,880
+        C 380,1000 340,1100 360,1200
+        C 390,1320 680,1370 700,1510
+        C 720,1650 370,1740 350,1870
+        C 330,2000 680,2070 700,2200
+        C 720,2340 350,2420 330,2560
+        C 310,2700 680,2770 700,2900
+        C 720,3020 410,3100 390,3200
+        C 370,3280 480,3320 490,3380
+      " fill="none" stroke="url(#cobble)" stroke-width="20" stroke-linecap="round"/>
+
+      <!-- Path edges (stone border) -->
+      <path d="
+        M 500,880
+        C 380,1000 340,1100 360,1200
+        C 390,1320 680,1370 700,1510
+        C 720,1650 370,1740 350,1870
+        C 330,2000 680,2070 700,2200
+        C 720,2340 350,2420 330,2560
+        C 310,2700 680,2770 700,2900
+        C 720,3020 410,3100 390,3200
+        C 370,3280 480,3320 490,3380
+      " fill="none" stroke="rgba(160,140,100,0.2)" stroke-width="3" stroke-linecap="round"/>
+
+      <!-- ===== TRAIL MARKERS ===== -->
+      <circle cx="500" cy="880" r="11" fill="#78B8D0" opacity="0.9" filter="url(#softGlow)"/>
+      <circle cx="360" cy="1200" r="9" fill="#78B8D0" opacity="0.85"/>
+      <circle cx="700" cy="1510" r="9" fill="#78B8D0" opacity="0.85"/>
+      <circle cx="350" cy="1870" r="9" fill="#78B8D0" opacity="0.8"/>
+      <circle cx="700" cy="2200" r="9" fill="#78B8D0" opacity="0.8"/>
+      <circle cx="330" cy="2560" r="9" fill="#78B8D0" opacity="0.75"/>
+      <circle cx="700" cy="2900" r="9" fill="#78B8D0" opacity="0.75"/>
+      <circle cx="390" cy="3200" r="9" fill="#78B8D0" opacity="0.7"/>
+
+      <!-- Summit flag -->
+      <line x1="500" y1="850" x2="500" y2="820" stroke="#C8E4EE" stroke-width="1.8"/>
+      <polygon points="500,820 524,828 500,836" fill="#78B8D0" opacity="0.85"/>
+
+      <text x="400" y="3440" font-family="'Cormorant Garamond',serif" font-size="14" fill="#4A7888" opacity="0.5" font-style="italic">The journey begins...</text>
+    </svg>
+
+    <!-- ===== CLICKABLE STOP MARKERS ===== -->
+
+    <div class="stop-marker right" style="top:810px;left:52%" onclick="openDetail(0)" data-i="0">
+      <div class="beacon">✦</div>
+      <div class="mini-card">
+        <div class="mc-company">Justworks <span class="now-badge">NOW</span></div>
+        <div class="mc-role">Engineering Manager, Pricing &amp; Billing</div>
+        <div class="mc-dates">Jan 2025 → Present</div>
+        <div class="mc-tap">tap to explore →</div>
+      </div>
+    </div>
+
+    <div class="stop-marker left" style="top:1130px;right:52%" onclick="openDetail(1)" data-i="1">
+      <div class="beacon">✦</div>
+      <div class="mini-card">
+        <div class="mc-company">Amazon Prime Video</div>
+        <div class="mc-role">EM, Voice Search</div>
+        <div class="mc-dates">Feb 2024 – Dec 2024</div>
+        <div class="mc-tap">tap to explore →</div>
+      </div>
+    </div>
+
+    <div class="stop-marker right" style="top:1440px;left:54%" onclick="openDetail(2)" data-i="2">
+      <div class="beacon">✦</div>
+      <div class="mini-card">
+        <div class="mc-company">Amazon Prime Video</div>
+        <div class="mc-role">EM, Recommendations</div>
+        <div class="mc-dates">Jun 2022 – Feb 2024</div>
+        <div class="mc-tap">tap to explore →</div>
+      </div>
+    </div>
+
+    <div class="stop-marker left" style="top:1800px;right:54%" onclick="openDetail(3)" data-i="3">
+      <div class="beacon">✦</div>
+      <div class="mini-card">
+        <div class="mc-company">Bread Financial</div>
+        <div class="mc-role">Sr. EM, Payments &amp; Collections</div>
+        <div class="mc-dates">Jan 2022 – Jun 2022</div>
+        <div class="mc-tap">tap to explore →</div>
+      </div>
+    </div>
+
+    <div class="stop-marker right" style="top:2130px;left:53%" onclick="openDetail(4)" data-i="4">
+      <div class="beacon">✦</div>
+      <div class="mini-card">
+        <div class="mc-company">Deutsche Bank</div>
+        <div class="mc-role">Sr. EM, Front-Office Trading</div>
+        <div class="mc-dates">Oct 2015 – Dec 2021</div>
+        <div class="mc-tap">tap to explore →</div>
+      </div>
+    </div>
+
+    <div class="stop-marker left" style="top:2490px;right:54%" onclick="openDetail(5)" data-i="5">
+      <div class="beacon">✦</div>
+      <div class="mini-card">
+        <div class="mc-company">Interactive Data</div>
+        <div class="mc-role">Principal Technologist</div>
+        <div class="mc-dates">May 2014 – Sep 2015</div>
+        <div class="mc-tap">tap to explore →</div>
+      </div>
+    </div>
+
+    <div class="stop-marker right" style="top:2830px;left:54%" onclick="openDetail(6)" data-i="6">
+      <div class="beacon">✦</div>
+      <div class="mini-card">
+        <div class="mc-company">Barclays Capital</div>
+        <div class="mc-role">Technical Lead</div>
+        <div class="mc-dates">Sep 2008 – Apr 2014</div>
+        <div class="mc-tap">tap to explore →</div>
+      </div>
+    </div>
+
+    <div class="stop-marker left" style="top:3130px;right:54%" onclick="openDetail(7)" data-i="7">
+      <div class="beacon">✦</div>
+      <div class="mini-card">
+        <div class="mc-company">Lehman Brothers</div>
+        <div class="mc-role">Technical Lead, Finance IT</div>
+        <div class="mc-dates">Jun 2007 – Sep 2008</div>
+        <div class="mc-tap">tap to explore →</div>
+      </div>
+    </div>
+
+  </div><!-- /scene -->
+
+  <section class="footer-section">
+    <p>Built with care · Mohit Keswani · 2025</p>
+  </section>
+</div><!-- /main -->
+
+<!-- ===== DETAIL OVERLAY ===== -->
+<div class="overlay" id="overlay" onclick="if(event.target===this)closeDetail()">
+  <div class="detail-panel" id="detailPanel">
+    <div class="dp-header">
+      <button class="close-btn" onclick="closeDetail()">✕</button>
+      <div class="dp-company" id="dpCompany"></div>
+      <div class="dp-role" id="dpRole"></div>
+      <div class="dp-dates" id="dpDates"></div>
+    </div>
+    <div class="dp-body">
+      <ul class="dp-desc" id="dpDesc"></ul>
+      <div class="dp-skills-label">Key Technologies &amp; Skills</div>
+      <div class="dp-skills" id="dpSkills"></div>
+    </div>
+    <div class="dp-skills" id="dpSkills"></div>
+  </div>
+</div>
+
+<script>
+const jobs = [
+  {
+    company:"Justworks",
+    role:"Engineering Manager, Pricing & Billing",
+    dates:"Jan 2025 → Present · New York, NY",
+    desc:[
+      "Lead a 6-engineer team owning pricing, billing, invoicing, and downstream finance workflows supporting 20K+ customers and $1.75B+ in annual collections, while remaining hands-on in critical-path design and implementation.",
+      "Partner with the Payments team on ACH file generation and with Accounts/Finance on end-to-end invoicing workflow, including NetSuite finance transmission, bank reconciliation, and NSF exception handling.",
+      "Built a Python-based anomaly detection platform for prepayment and insurance collections to identify overpayments and revenue leakage across a 6-phase workflow; recovered approximately $1M annually and improved auditability.",
+      "Built and rolled out an LLM-powered knowledge assistant for billing and pricing support using RubyLLM and retrieval-based orchestration patterns; reduced customer support resolution time from ~5 minutes to 30-60 seconds.",
+      "Shipped packaging and discount primitives, including EOR and international readiness capabilities, enabling launches tied to more than $9M in ARR impact across 2025-2026.",
+      "Drove hiring, performance, growth planning, and promotion development for engineers across the team.",
+      "Ask-Mo: Built an AI-powered code knowledge graph and microservice intelligence platform that answers natural-language questions across 35+ repositories and 5 languages.",
+      "Designed an Ingest-Graph-Query pipeline using tree-sitter AST extraction, call graph enrichment, and LLM summarization to create structured knowledge artifacts from 28,000+ source files.",
+      "Constructed a NetworkX + pgvector knowledge graph with 40 services, 1,150+ confidence-scored dependency edges, and 54,000+ vector-indexed knowledge chunks.",
+      "Implemented agentic RAG with query routing, evidence planning, tool calling, hybrid BM25/vector retrieval, cross-encoder reranking, and LLM-as-a-Judge verification layer.",
+      "Built FastAPI, Vue.js, and MCP-based interfaces integrating Datadog, Snowflake, JIRA, GitHub, PagerDuty, and LaunchDarkly; reduced retrieval noise by 84%, cut prompt cost by ~90%."
+    ],
+    skills:["Pricing & Billing","Anomaly Detection","LLM / RAG","Knowledge Graphs","ACH / Invoicing","Python","FastAPI","RubyLLM","Vue.js","pgvector","NetworkX"]
+  },
+  {
+    company:"Amazon Prime Video",
+    role:"Engineering Manager, Voice Search",
+    dates:"Feb 2024 – Dec 2024 · New York, NY",
+    desc:[
+      "Led a 7-engineer team delivering Prime Video voice search and playback improvements using Java, Kotlin, OpenSearch, and SageMaker.",
+      "Partnered with Applied Science to productionize NER and LLM-based query transformation for title, movie, and actor retrieval against Amazon's worldwide Lucene index, improving match quality and reducing 'no results' queries.",
+      "Built an ANN-based hints index using HNSW over historical voice data to generate relevant follow-up suggestions through LLM orchestration.",
+      "Built a voice search enrichment and hints service to improve discovery, query understanding, retrieval quality, and end-user task completion.",
+      "Coached engineers through design, delivery, and on-call ownership in a distributed organization.",
+      "Removed unused infrastructure and simplified the stack, saving approximately $30K annually and reducing operational load."
+    ],
+    skills:["NER / NLP","HNSW / ANN","Voice Search","LLM Orchestration","Java","Kotlin","OpenSearch","SageMaker"]
+  },
+  {
+    company:"Amazon Prime Video",
+    role:"Engineering Manager, Recommendations",
+    dates:"Jun 2022 – Feb 2024 · New York, NY",
+    desc:[
+      "Managed a 12-engineer team building ML-driven promotional storefronts and placement systems for Prime Video, partnering with Ads, IMDb, OTT, and Sports teams.",
+      "Shipped an explore/exploit ranking system combining two-tower retrieval and multi-armed bandit reranking using Thompson sampling for OTT title recommendations.",
+      "Built a Placement Intelligence microservice on AWS ECS/Fargate that scaled to approximately 40K TPS for algorithmic and reranked placement decisions.",
+      "Grew engagement to 250M impressions and 61M monthly streams while reducing manual merchandising from ~80% to 10-15%.",
+      "Applied retrieval and ranking approaches including RRF to improve relevance and content placement quality.",
+      "Decommissioned a legacy recommendation system, saving $500K annually, and improved internal support throughput by raising average ticket quality score from 66 to 98."
+    ],
+    skills:["Recommendation Systems","Two-Tower Retrieval","Multi-Armed Bandits","Thompson Sampling","RRF / Ranking","AWS ECS/Fargate"]
+  },
+  {
+    company:"Bread Financial",
+    role:"Senior Engineering Manager, Payments & Collections",
+    dates:"Jan 2022 – Jun 2022 · New York, NY",
+    desc:[
+      "Managed 2 engineering managers and 20 engineers across payments and collections platforms.",
+      "Built a real-time payment audit system to identify declined cards and failed ACH transfers and trigger customer service workflows.",
+      "Modernized debt-collection integrations by replacing overnight batch processing with a real-time microservice architecture, improving responsiveness and data freshness.",
+      "Led Zendesk-to-Salesforce migration through custom ETL services in Go."
+    ],
+    skills:["Payments","Collections","Real-Time Audit","Go","Microservices","ETL","Salesforce"]
+  },
+  {
+    company:"Deutsche Bank",
+    role:"Senior Engineering Manager, Front-Office Trading",
+    dates:"Oct 2015 – Dec 2021 · New York, NY",
+    desc:[
+      "Managed two engineering pods of 5 developers each delivering MBS, Repo, and Bond trading systems in partnership with front-office stakeholders.",
+      "Built an order-book depth service integrating bid/ask data from Dealerweb, Tradeweb, and Bloomberg, contributing to a 5% increase in trading revenue by surfacing arbitrage opportunities.",
+      "Implemented balance-sheet optimization logic that saved approximately $500K annually in custodian costs.",
+      "Launched an RFQ STP and algo-trading engine that contributed to roughly 10% revenue growth.",
+      "Replaced ION connectivity with in-house market connectivity for MBS trading, reducing licensing costs by approximately $2M annually."
+    ],
+    skills:["MBS / Repo / Bonds","Algo Trading","Order Book Systems","Capital Markets","C++","Balance Sheet Optimization"]
+  },
+  {
+    company:"Interactive Data",
+    role:"Principal Technologist, MBS Reference/Pricing",
+    dates:"May 2014 – Sep 2015 · New York, NY",
+    desc:[
+      "Led architecture and development of a real-time RMBS reference data and pricing platform, replacing an offline legacy system and enabling risk evaluation workflows.",
+      "Managed backlog and sprint execution while delivering a platform that saved approximately $300K annually."
+    ],
+    skills:["RMBS Pricing","Real-Time Data","Risk Evaluation","System Architecture"]
+  },
+  {
+    company:"Barclays Capital",
+    role:"Technical Lead, Product Controller IT",
+    dates:"Sep 2008 – Apr 2014 · New York, NY",
+    desc:[
+      "Built a netting and aggregation engine for daily equity trades, reducing clearing costs by approximately $500K annually.",
+      "Managed offshore teams in Prague and India to deliver platform enhancements."
+    ],
+    skills:["Trade Processing","Netting / Clearing","Equity Trades","Java","Distributed Teams"]
+  },
+  {
+    company:"Lehman Brothers",
+    role:"Technical Lead, Finance IT",
+    dates:"Jun 2007 – Sep 2008 · New York, NY",
+    desc:[
+      "Designed and built the New Deal Review application for finance product controllers.",
+      "Automated workflows for complex OTC derivative deals and centralized data to support compliance.",
+      "Designed the database model for performance and scale requirements."
+    ],
+    skills:["OTC Derivatives","Database Design","Finance IT","Compliance","Workflow Automation"]
+  }
+];
+
+function openDetail(i) {
+  const j = jobs[i];
+  document.getElementById('dpCompany').textContent = j.company;
+  document.getElementById('dpRole').textContent = j.role;
+  document.getElementById('dpDates').textContent = j.dates;
+  const ul = document.getElementById('dpDesc');
+  ul.innerHTML = '';
+  j.desc.forEach(d => { const li = document.createElement('li'); li.textContent = d; ul.appendChild(li); });
+  const sk = document.getElementById('dpSkills');
+  sk.innerHTML = '';
+  j.skills.forEach(s => { const sp = document.createElement('span'); sp.className='sk'; sp.textContent=s; sk.appendChild(sp); });
+  const ov = document.getElementById('overlay');
+  ov.style.display = 'flex';
+  requestAnimationFrame(() => ov.classList.add('open'));
+}
+function closeDetail() {
+  const ov = document.getElementById('overlay');
+  ov.classList.remove('open');
+  setTimeout(() => { ov.style.display='none'; }, 300);
+}
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeDetail(); });
+</script>
+
+</body>
+</html>
