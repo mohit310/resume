@@ -30,7 +30,7 @@
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   html { color-scheme: only light; }
-  body { font-family:'Nunito Sans',sans-serif; background:var(--bg); color:var(--text); overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+  body { font-family:'Nunito Sans',sans-serif; background:var(--bg); color:var(--text); overflow-x:hidden; -webkit-font-smoothing:antialiased; font-size:clamp(16px, 1.15vw, 19px); }
 
   /* ===== SKILLS SIDEBAR ===== */
   .sidebar {
@@ -43,7 +43,7 @@
   .sidebar::-webkit-scrollbar { width:4px; }
   .sidebar::-webkit-scrollbar-thumb { background:rgba(80,150,170,0.25); border-radius:2px; }
   .sidebar .sid-title {
-    font-family:'Cormorant Garamond',serif; font-weight:700; font-size:1.1rem;
+    font-family:'Cormorant Garamond',serif; font-weight:700; font-size:clamp(1.15rem, 1.3vw, 1.3rem);
     color:var(--gold); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:20px;
     padding-bottom:10px; border-bottom:1px solid rgba(80,150,170,0.15);
   }
@@ -55,7 +55,7 @@
   .skill-group h4 .icon { font-size:0.8rem; }
   .skill-group .tags { display:flex; flex-wrap:wrap; gap:4px; }
   .skill-group .tag {
-    font-size:0.6rem; padding:3px 9px; border-radius:4px; font-weight:500;
+    font-size:clamp(0.72rem, 0.85vw, 0.8rem); padding:5px 11px; border-radius:4px; font-weight:500;
     transition: transform 0.2s, box-shadow 0.2s, background 0.2s; cursor:default;
     letter-spacing:0.2px;
   }
@@ -68,8 +68,8 @@
   /* Sidebar education */
   .sid-edu { margin-top:10px; padding-top:14px; border-top:1px solid rgba(80,150,170,0.12); }
   .sid-edu h4 { font-size:0.68rem; color:var(--gold); font-weight:600; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px; }
-  .sid-edu p { font-size:0.7rem; color:var(--text-dim); line-height:1.5; }
-  .sid-edu .cert { font-size:0.62rem; color:var(--text-muted); margin-top:2px; padding-left:10px; position:relative; }
+  .sid-edu p { font-size:clamp(0.82rem, 0.95vw, 0.92rem); color:var(--text-dim); line-height:1.5; }
+  .sid-edu .cert { font-size:clamp(0.75rem, 0.88vw, 0.85rem); color:var(--text-muted); margin-top:2px; padding-left:10px; position:relative; }
   .sid-edu .cert::before { content:'◇'; position:absolute; left:0; color:var(--gold-dark); font-size:0.5rem; }
 
   /* ===== MAIN CONTENT ===== */
@@ -77,46 +77,57 @@
 
   /* Header */
   .header {
-    text-align:center; padding:45px 20px 15px;
-    background:linear-gradient(to bottom, #0e1018 0%, transparent 100%);
-    position:relative; z-index:10;
+    text-align:center; padding:30px 20px 24px;
+    position:absolute; top:0; left:0; right:0; z-index:10;
+    background:linear-gradient(to bottom,
+      rgba(10,12,20,0.95) 0%,
+      rgba(10,12,20,0.88) 30%,
+      rgba(10,12,20,0.7) 60%,
+      rgba(10,12,20,0.35) 85%,
+      transparent 100%
+    );
   }
   .header h1 {
     font-family:'Cormorant Garamond',serif; font-weight:700;
-    font-size:clamp(2rem,5vw,3.4rem); letter-spacing:3px; margin-bottom:6px;
-    background:linear-gradient(135deg,#ffffff 0%,#78B8D0 50%,#3D7A88 100%);
-    -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+    font-size:clamp(2.4rem,5.5vw,3.8rem); letter-spacing:3px; margin-bottom:6px;
+    color:#ffffff;
+    -webkit-text-fill-color:#ffffff;
+    text-shadow:0 2px 12px rgba(0,0,0,0.6);
   }
   .header .subtitle {
-    font-size:clamp(0.72rem,1.6vw,0.92rem);
-    color:var(--gold); font-weight:500; letter-spacing:2.5px; text-transform:uppercase; margin-bottom:12px;
+    font-size:clamp(0.88rem,1.8vw,1.05rem);
+    color:#C8E4EE; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; margin-bottom:8px;
+    text-shadow:0 1px 8px rgba(0,0,0,0.6);
   }
   .header .contact {
     display:flex; justify-content:center; flex-wrap:wrap; gap:14px;
-    font-size:0.78rem; color:var(--text-muted);
+    font-size:clamp(0.88rem, 1vw, 0.98rem); color:#d0ccc4;
+    text-shadow:0 1px 6px rgba(0,0,0,0.6);
   }
-  .header .contact .sep { color:var(--gold-dark); }
+  .header .contact .sep { color:#78B8D0; }
   .header .summary-text {
-    max-width:720px; margin:14px auto 0; font-size:0.84rem; line-height:1.6;
-    color:var(--text-dim); font-weight:300;
+    max-width:720px; margin:8px auto 0; font-size:clamp(0.95rem, 1.1vw, 1.08rem); line-height:1.7;
+    color:#ccc8c0; font-weight:400;
+    text-shadow:0 1px 6px rgba(0,0,0,0.6);
   }
   .header .click-hint {
-    margin-top:14px; font-size:0.7rem; color:rgba(120,184,208,0.45);
+    margin-top:6px; font-size:clamp(0.8rem, 0.9vw, 0.9rem); color:rgba(245,230,200,0.75);
     font-style:italic; letter-spacing:0.5px;
     display:flex; align-items:center; justify-content:center; gap:6px;
+    text-shadow:0 1px 6px rgba(0,0,0,0.5);
   }
   .header .click-hint::before, .header .click-hint::after {
-    content:''; width:30px; height:1px; background:rgba(120,184,208,0.15);
+    content:''; width:30px; height:1px; background:rgba(245,230,200,0.25);
   }
 
   
 
   /* ===== SCENE ===== */
-  .scene { position:relative; width:100%; height:3650px; }
+  .scene { position:relative; width:100%; height:3300px; }
   .scene-sky {
     position:absolute; inset:0;
     background:linear-gradient(to bottom,
-      #0e1018 0%, #141830 5%, #1e2858 10%, #2a4080 16%,
+      #111828 0%, #182040 5%, #1e2858 10%, #2a4080 16%,
       #4a7ab0 24%, #6aa8c8 30%, #88c8d8 36%,
       #70b8a0 44%, #58a078 50%, #408860 56%,
       #387850 62%, #306840 68%, #285a38 74%,
@@ -171,19 +182,19 @@
   }
   .mini-card .mc-company {
     font-family:'Cormorant Garamond',serif; font-weight:700;
-    font-size:clamp(1.05rem, 1.4vw, 1.3rem); color:#fff; letter-spacing:0.3px;
+    font-size:clamp(1.18rem, 1.6vw, 1.4rem); color:#fff; letter-spacing:0.3px;
   }
   .mini-card .mc-role {
-    font-size:clamp(0.76rem, 1vw, 0.9rem); color:#90C8D8; font-weight:600;
+    font-size:clamp(0.9rem, 1.15vw, 1.05rem); color:#90C8D8; font-weight:600;
     margin-top:2px; letter-spacing:0.2px;
   }
   .mini-card .mc-dates {
     font-family:'JetBrains Mono',monospace;
-    font-size:clamp(0.62rem, 0.8vw, 0.72rem); color:#8a8078; margin-top:5px;
+    font-size:clamp(0.76rem, 0.95vw, 0.85rem); color:#8a8078; margin-top:5px;
     padding-top:5px; border-top:1px solid rgba(80,150,170,0.08);
   }
   .mini-card .mc-tap {
-    font-size:clamp(0.6rem, 0.75vw, 0.68rem); color:rgba(120,184,208,0.5); margin-top:7px;
+    font-size:clamp(0.72rem, 0.88vw, 0.8rem); color:rgba(120,184,208,0.5); margin-top:7px;
     font-style:italic; transition:color 0.3s;
   }
   .stop-marker:hover .mini-card .mc-tap { color:rgba(120,184,208,0.8); }
@@ -236,7 +247,7 @@
   .detail-panel .close-btn:hover { background:rgba(120,184,208,0.12); border-color:rgba(80,150,170,0.3); }
   .detail-panel .dp-company {
     font-family:'Cormorant Garamond',serif; font-weight:700;
-    font-size:clamp(1.6rem, 2.5vw, 2.2rem);
+    font-size:clamp(1.9rem, 2.8vw, 2.5rem);
     color:#fff; margin-bottom:5px; letter-spacing:0.5px;
   }
   .detail-panel .dp-role {
@@ -255,7 +266,7 @@
     list-style:none; padding:0; margin-bottom:24px;
   }
   .detail-panel .dp-desc li {
-    font-size:clamp(0.9rem, 1.15vw, 1.05rem); color:#c8c0b4; line-height:1.7;
+    font-size:clamp(1.02rem, 1.25vw, 1.15rem); color:#d0c8bc; line-height:1.78;
     padding:clamp(8px, 1vw, 12px) 0 clamp(8px, 1vw, 12px) clamp(18px, 2vw, 24px);
     position:relative;
     border-bottom:1px solid rgba(80,150,170,0.05);
@@ -267,12 +278,12 @@
     background:rgba(120,184,208,0.5);
   }
   .detail-panel .dp-skills-label {
-    font-size:clamp(0.7rem, 0.9vw, 0.8rem); color:#8a7a68; font-weight:600;
+    font-size:clamp(0.82rem, 0.98vw, 0.92rem); color:#8a7a68; font-weight:600;
     letter-spacing:1.5px; text-transform:uppercase; margin-bottom:10px;
   }
   .detail-panel .dp-skills { display:flex; flex-wrap:wrap; gap:clamp(6px, 0.8vw, 10px); }
   .detail-panel .dp-skills .sk {
-    font-size:clamp(0.74rem, 0.95vw, 0.88rem); padding:clamp(5px, 0.6vw, 8px) clamp(12px, 1.5vw, 18px);
+    font-size:clamp(0.85rem, 1.05vw, 0.98rem); padding:clamp(6px, 0.7vw, 10px) clamp(14px, 1.6vw, 20px);
     border-radius:6px; font-weight:500;
     background:linear-gradient(135deg, rgba(120,184,208,0.08) 0%, rgba(120,184,208,0.04) 100%);
     border:1px solid rgba(120,184,208,0.2); color:#78B8D0;
@@ -287,7 +298,7 @@
     position:relative; z-index:10; padding:20px 30px 50px;
     text-align:center;
   }
-  .footer-section p { font-size:0.72rem; color:var(--text-muted); }
+  .footer-section p { font-size:clamp(0.84rem, 0.95vw, 0.94rem); color:var(--text-muted); }
 
   /* ===== RESPONSIVE ===== */
   @media (min-width:1400px) {
@@ -433,21 +444,21 @@
 <!-- ===== MAIN ===== -->
 <div class="main">
 
-  <header class="header">
-    <h1>MOHIT KESWANI</h1>
-    <div class="subtitle">Engineering Manager — FinTech · AI/ML · Intelligent Systems</div>
-    <div class="contact">
-      <span>Hasbrouck Heights, NJ</span><span class="sep">·</span>
-      <span>+1 201-450-3109</span><span class="sep">·</span>
-      <span>mohit.keswani@gmail.com</span>
-    </div>
-    <p class="summary-text">Hands-on engineering leader with 18+ years building revenue-critical fintech platforms and applied AI/ML systems across SaaS, media, and capital markets.</p>
-    <p class="click-hint">✦ Click any milestone to explore the full story</p>
-  </header>
-
   <!-- ===== SCENE ===== -->
   <div class="scene">
     <div class="scene-sky"></div>
+
+    <header class="header">
+      <h1>MOHIT KESWANI</h1>
+      <div class="subtitle">Engineering Manager — FinTech · AI/ML · Intelligent Systems</div>
+      <div class="contact">
+        <span>Hasbrouck Heights, NJ</span><span class="sep">·</span>
+        <span>+1 201-450-3109</span><span class="sep">·</span>
+        <span>mohit.keswani@gmail.com</span>
+      </div>
+      <p class="summary-text">Hands-on engineering leader with 18+ years building revenue-critical fintech platforms and applied AI/ML systems across SaaS, media, and capital markets.</p>
+      <p class="click-hint">✦ Click any milestone to explore the full story</p>
+    </header>
 
 
 
@@ -503,76 +514,76 @@
       </g>
 
       <!-- ===== SNOW MOUNTAINS ===== -->
-      <path d="M0,550 L100,300 200,420 320,220 440,360 520,180 640,340 760,260 880,400 960,320 1000,420 1000,700 0,700Z" fill="url(#snowPeak)" opacity="0.85"/>
-      <path d="M0,620 L80,440 180,540 310,380 460,500 580,350 700,480 820,370 940,500 1000,440 1000,750 0,750Z" fill="url(#mtn2)" opacity="0.85"/>
+      <path d="M0,450 L100,250 200,360 320,180 440,310 520,140 640,290 760,220 880,350 960,270 1000,370 1000,560 0,560Z" fill="url(#snowPeak)" opacity="0.85"/>
+      <path d="M0,520 L80,370 180,460 310,320 460,420 580,290 700,400 820,310 940,420 1000,370 1000,620 0,620Z" fill="url(#mtn2)" opacity="0.85"/>
 
       <!-- ===== WATERFALL ===== -->
       <g>
         <!-- Rock face -->
-        <path d="M180,400 L195,400 195,520 175,520Z" fill="#5a6878" opacity="0.6"/>
+        <path d="M180,320 L195,320 195,440 175,440Z" fill="#5a6878" opacity="0.6"/>
         <!-- Water streams -->
-        <rect class="wf-drop" x="182" y="405" width="3" height="20" rx="1.5" fill="rgba(200,230,255,0.7)"/>
-        <rect class="wf-drop" x="186" y="410" width="2.5" height="18" rx="1.2" fill="rgba(200,230,255,0.6)"/>
-        <rect class="wf-drop" x="189" y="408" width="2" height="22" rx="1" fill="rgba(200,230,255,0.5)"/>
-        <rect class="wf-drop" x="184" y="415" width="2.5" height="16" rx="1.2" fill="rgba(200,230,255,0.55)"/>
-        <!-- Splash -->
-        <ellipse cx="186" cy="525" rx="14" ry="4" fill="rgba(200,230,255,0.25)"/>
+        <rect class="wf-drop" x="182" y="325" width="3" height="20" rx="1.5" fill="rgba(200,230,255,0.7)"/>
+        <rect class="wf-drop" x="186" y="330" width="2.5" height="18" rx="1.2" fill="rgba(200,230,255,0.6)"/>
+        <rect class="wf-drop" x="189" y="328" width="2" height="22" rx="1" fill="rgba(200,230,255,0.5)"/>
+        <rect class="wf-drop" x="184" y="335" width="2.5" height="16" rx="1.2" fill="rgba(200,230,255,0.55)"/>
+        <!-- Small splash pool -->
+        <ellipse cx="186" cy="445" rx="16" ry="5" fill="rgba(100,180,210,0.2)"/>
+        <ellipse cx="186" cy="445" rx="10" ry="3" fill="rgba(150,210,240,0.15)"/>
       </g>
 
-      <!-- ===== MIST ===== -->
-      <rect x="0" y="680" width="1000" height="80" fill="rgba(180,200,220,0.12)" filter="url(#blur2)"/>
+      <!-- ===== MIST (mountain-hill transition) ===== -->
+      <rect x="0" y="530" width="1000" height="40" fill="rgba(50,80,55,0.12)" filter="url(#blur2)"/>
 
-      <!-- ===== GREEN HILLS ===== -->
-      <path d="M0,800 Q120,720 250,790 T500,750 T750,800 T1000,770 L1000,950 0,950Z" fill="url(#hill)" opacity="0.85"/>
+      <!-- ===== GREEN HILLS (start right at mountain base) ===== -->
+      <path d="M0,570 Q120,530 250,560 T500,540 T750,570 T1000,550 L1000,730 0,730Z" fill="url(#hill)" opacity="0.9"/>
 
       <!-- ===== TREES (Pines + Round) ===== -->
       <g opacity="0.75">
-        <!-- Pine trees -->
-        <polygon points="70,780 80,720 90,780" fill="#2a6838"/>
-        <polygon points="72,760 80,710 88,760" fill="#308040"/>
-        <rect x="78" y="780" width="4" height="10" fill="#5a4030"/>
+        <!-- Pine trees - left cluster -->
+        <polygon points="50,560 60,500 70,560" fill="#2a6838"/>
+        <polygon points="52,540 60,490 68,540" fill="#308040"/>
+        <rect x="58" y="560" width="4" height="10" fill="#5a4030"/>
 
-        <polygon points="110,790 120,735 130,790" fill="#286030"/>
-        <polygon points="112,770 120,725 128,770" fill="#2c7038"/>
-        <rect x="118" y="790" width="4" height="8" fill="#5a4030"/>
+        <polygon points="85,570 95,515 105,570" fill="#286030"/>
+        <polygon points="87,550 95,505 103,550" fill="#2c7038"/>
+        <rect x="93" y="570" width="4" height="8" fill="#5a4030"/>
 
-        <polygon points="880,770 892,710 904,770" fill="#2a6838"/>
-        <polygon points="882,750 892,700 902,750" fill="#308040"/>
-        <rect x="890" y="770" width="4" height="10" fill="#5a4030"/>
+        <!-- Pine trees - right cluster -->
+        <polygon points="880,550 892,490 904,550" fill="#2a6838"/>
+        <polygon points="882,530 892,480 902,530" fill="#308040"/>
+        <rect x="890" y="550" width="4" height="10" fill="#5a4030"/>
 
-        <polygon points="920,785 930,740 940,785" fill="#286030"/>
-        <rect x="928" y="785" width="4" height="8" fill="#5a4030"/>
+        <polygon points="920,565 930,520 940,565" fill="#286030"/>
+        <rect x="928" y="565" width="4" height="8" fill="#5a4030"/>
 
         <!-- Round trees -->
-        <rect x="158" y="775" width="5" height="14" fill="#5a4030"/>
-        <circle cx="160" cy="768" r="14" fill="#3a7a48"/>
-        <circle cx="160" cy="764" r="10" fill="#48884a"/>
+        <rect x="38" y="555" width="5" height="14" fill="#5a4030"/>
+        <circle cx="40" cy="548" r="14" fill="#3a7a48"/>
+        <circle cx="40" cy="544" r="10" fill="#48884a"/>
 
-        <rect x="848" y="780" width="5" height="12" fill="#5a4030"/>
-        <circle cx="850" cy="773" r="12" fill="#3a7a48"/>
+        <rect x="848" y="560" width="5" height="12" fill="#5a4030"/>
+        <circle cx="850" cy="553" r="12" fill="#3a7a48"/>
       </g>
 
       <!-- More hills -->
-      <path d="M0,930 Q180,870 360,930 T720,890 T1000,940 L1000,1120 0,1120Z" fill="url(#hillDk)" opacity="0.85"/>
+      <path d="M0,710 Q180,660 360,710 T720,680 T1000,720 L1000,880 0,880Z" fill="url(#hillDk)" opacity="0.85"/>
 
-      <!-- ===== VILLAGE HOUSES ===== -->
+      <!-- ===== VILLAGE HOUSES (at mountain base) ===== -->
       <!-- House 1 (left side) -->
-      <g transform="translate(60,880)">
+      <g transform="translate(60,660)">
         <rect x="0" y="10" width="35" height="28" rx="1" fill="#8a6a4a"/>
         <polygon points="-4,10 17.5,-8 39,10" fill="#a04030"/>
         <rect x="8" y="18" width="8" height="8" fill="#ffe880" opacity="0.7"/>
         <rect x="20" y="18" width="8" height="8" fill="#ffe880" opacity="0.5"/>
         <rect x="14" y="28" width="7" height="10" fill="#5a4030"/>
-        <!-- Chimney -->
         <rect x="28" y="-2" width="6" height="14" fill="#6a5040"/>
-        <!-- Smoke -->
         <circle class="smoke-puff" cx="31" cy="-6" r="3" fill="rgba(180,170,160,0.3)"/>
         <circle class="smoke-puff" cx="33" cy="-10" r="2.5" fill="rgba(180,170,160,0.25)"/>
         <circle class="smoke-puff" cx="30" cy="-14" r="3.5" fill="rgba(180,170,160,0.2)"/>
       </g>
 
       <!-- House 2 (right side) -->
-      <g transform="translate(860,870)">
+      <g transform="translate(860,650)">
         <rect x="0" y="10" width="40" height="30" rx="1" fill="#7a6040"/>
         <polygon points="-3,10 20,-10 43,10" fill="#b04a38"/>
         <rect x="6" y="17" width="9" height="9" fill="#ffe880" opacity="0.6"/>
@@ -584,7 +595,7 @@
       </g>
 
       <!-- House 3 (mid-left) -->
-      <g transform="translate(140,910)">
+      <g transform="translate(140,690)">
         <rect x="0" y="8" width="30" height="24" rx="1" fill="#9a7a5a"/>
         <polygon points="-3,8 15,-6 33,8" fill="#904838"/>
         <rect x="6" y="14" width="7" height="7" fill="#ffe880" opacity="0.6"/>
@@ -594,26 +605,40 @@
 
       <!-- ===== FLOWERS / BUSHES ===== -->
       <g opacity="0.7">
-        <!-- Bushes -->
-        <ellipse cx="200" cy="940" rx="12" ry="8" fill="#2a6838"/>
-        <ellipse cx="750" cy="930" rx="14" ry="9" fill="#2a6838"/>
-        <ellipse cx="400" cy="945" rx="10" ry="7" fill="#286035"/>
-        <!-- Flowers -->
-        <circle cx="220" cy="935" r="2.5" fill="#e86080"/>
-        <circle cx="225" cy="938" r="2" fill="#f0a040"/>
-        <circle cx="740" cy="925" r="2.5" fill="#e0e040"/>
-        <circle cx="745" cy="928" r="2" fill="#e86080"/>
-        <circle cx="395" cy="940" r="2" fill="#f0a040"/>
-        <circle cx="405" cy="938" r="2.5" fill="#e0e040"/>
-        <circle cx="610" cy="942" r="2" fill="#e86080"/>
-        <circle cx="320" cy="935" r="2.5" fill="#a080e0"/>
+        <ellipse cx="200" cy="720" rx="12" ry="8" fill="#2a6838"/>
+        <ellipse cx="750" cy="710" rx="14" ry="9" fill="#2a6838"/>
+        <ellipse cx="400" cy="725" rx="10" ry="7" fill="#286035"/>
+        <circle cx="220" cy="715" r="2.5" fill="#e86080"/>
+        <circle cx="225" cy="718" r="2" fill="#f0a040"/>
+        <circle cx="740" cy="705" r="2.5" fill="#e0e040"/>
+        <circle cx="745" cy="708" r="2" fill="#e86080"/>
+        <circle cx="395" cy="720" r="2" fill="#f0a040"/>
+        <circle cx="405" cy="718" r="2.5" fill="#e0e040"/>
+        <circle cx="610" cy="722" r="2" fill="#e86080"/>
+        <circle cx="320" cy="715" r="2.5" fill="#a080e0"/>
       </g>
 
-      <!-- ===== RIVER ===== -->
-      <path d="M180,530 Q200,560 220,600 Q260,700 300,800 Q340,900 320,1000 Q300,1100 280,1200 Q260,1350 300,1500 Q340,1600 320,1700 Q300,1800 280,1900 Q260,2050 300,2200 Q340,2300 320,2400 Q300,2600 280,2800 Q260,3000 300,3200 L300,3500"
-        fill="none" stroke="url(#river)" stroke-width="14" stroke-linecap="round" opacity="0.5"/>
-      <path d="M180,530 Q200,560 220,600 Q260,700 300,800 Q340,900 320,1000 Q300,1100 280,1200 Q260,1350 300,1500"
-        fill="none" stroke="rgba(150,210,240,0.15)" stroke-width="6" stroke-linecap="round"/>
+      <!-- ===== THIN STREAM (subtle, not a water body) ===== -->
+      <path d="M280,900 Q290,1000 285,1100 Q275,1250 285,1400 Q295,1500 288,1600 Q278,1750 285,1900 Q292,2050 285,2200 Q278,2400 285,2600 Q290,2800 285,3000 L285,3300"
+        fill="none" stroke="rgba(100,180,210,0.2)" stroke-width="5" stroke-linecap="round"/>
+
+      <!-- ===== FILL GAP: Continuous green terrain y=860 to y=1120 ===== -->
+      <path d="M0,860 Q150,840 300,860 T600,845 T900,865 T1000,855 L1000,1120 0,1120Z" fill="#2a5a36" opacity="0.85"/>
+
+      <!-- Small decorative lake -->
+      <ellipse cx="700" cy="950" rx="55" ry="18" fill="rgba(70,150,190,0.2)"/>
+      <ellipse cx="700" cy="950" rx="40" ry="12" fill="rgba(90,170,210,0.15)"/>
+      <ellipse cx="700" cy="950" rx="25" ry="7" fill="rgba(120,190,220,0.1)"/>
+
+      <!-- Trees and bushes around the lake -->
+      <g opacity="0.6">
+        <polygon points="630,945 640,900 650,945" fill="#286030"/>
+        <polygon points="760,940 770,895 780,940" fill="#2a6838"/>
+        <circle cx="650" cy="935" r="8" fill="#3a7848"/>
+        <circle cx="755" cy="932" r="7" fill="#3a7848"/>
+        <ellipse cx="680" cy="960" rx="8" ry="5" fill="#286035"/>
+        <ellipse cx="730" cy="958" rx="9" ry="5" fill="#286035"/>
+      </g>
 
       <!-- More terrain + trees continuing down -->
       <path d="M0,1100 Q200,1050 400,1100 T800,1060 T1000,1110 L1000,1320 0,1320Z" fill="#306840" opacity="0.8"/>
@@ -721,63 +746,63 @@
       <!-- COBBLESTONE WINDING TRAIL                    -->
       <!-- ============================================ -->
       <path d="
-        M 500,880
-        C 380,1000 340,1100 360,1200
-        C 390,1320 680,1370 700,1510
-        C 720,1650 370,1740 350,1870
-        C 330,2000 680,2070 700,2200
-        C 720,2340 350,2420 330,2560
-        C 310,2700 680,2770 700,2900
-        C 720,3020 410,3100 390,3200
-        C 370,3280 480,3320 490,3380
+        M 500,660
+        C 380,780 340,880 360,980
+        C 390,1100 680,1150 700,1290
+        C 720,1430 370,1520 350,1650
+        C 330,1780 680,1850 700,1980
+        C 720,2120 350,2200 330,2340
+        C 310,2480 680,2550 700,2680
+        C 720,2800 410,2880 390,2980
+        C 370,3060 480,3100 490,3160
       " fill="none" stroke="rgba(90,70,45,0.5)" stroke-width="24" stroke-linecap="round"/>
 
       <!-- Cobblestone texture -->
       <path d="
-        M 500,880
-        C 380,1000 340,1100 360,1200
-        C 390,1320 680,1370 700,1510
-        C 720,1650 370,1740 350,1870
-        C 330,2000 680,2070 700,2200
-        C 720,2340 350,2420 330,2560
-        C 310,2700 680,2770 700,2900
-        C 720,3020 410,3100 390,3200
-        C 370,3280 480,3320 490,3380
+        M 500,660
+        C 380,780 340,880 360,980
+        C 390,1100 680,1150 700,1290
+        C 720,1430 370,1520 350,1650
+        C 330,1780 680,1850 700,1980
+        C 720,2120 350,2200 330,2340
+        C 310,2480 680,2550 700,2680
+        C 720,2800 410,2880 390,2980
+        C 370,3060 480,3100 490,3160
       " fill="none" stroke="url(#cobble)" stroke-width="20" stroke-linecap="round"/>
 
       <!-- Path edges (stone border) -->
       <path d="
-        M 500,880
-        C 380,1000 340,1100 360,1200
-        C 390,1320 680,1370 700,1510
-        C 720,1650 370,1740 350,1870
-        C 330,2000 680,2070 700,2200
-        C 720,2340 350,2420 330,2560
-        C 310,2700 680,2770 700,2900
-        C 720,3020 410,3100 390,3200
-        C 370,3280 480,3320 490,3380
+        M 500,660
+        C 380,780 340,880 360,980
+        C 390,1100 680,1150 700,1290
+        C 720,1430 370,1520 350,1650
+        C 330,1780 680,1850 700,1980
+        C 720,2120 350,2200 330,2340
+        C 310,2480 680,2550 700,2680
+        C 720,2800 410,2880 390,2980
+        C 370,3060 480,3100 490,3160
       " fill="none" stroke="rgba(160,140,100,0.2)" stroke-width="3" stroke-linecap="round"/>
 
       <!-- ===== TRAIL MARKERS ===== -->
-      <circle cx="500" cy="880" r="11" fill="#78B8D0" opacity="0.9" filter="url(#softGlow)"/>
-      <circle cx="360" cy="1200" r="9" fill="#78B8D0" opacity="0.85"/>
-      <circle cx="700" cy="1510" r="9" fill="#78B8D0" opacity="0.85"/>
-      <circle cx="350" cy="1870" r="9" fill="#78B8D0" opacity="0.8"/>
-      <circle cx="700" cy="2200" r="9" fill="#78B8D0" opacity="0.8"/>
-      <circle cx="330" cy="2560" r="9" fill="#78B8D0" opacity="0.75"/>
-      <circle cx="700" cy="2900" r="9" fill="#78B8D0" opacity="0.75"/>
-      <circle cx="390" cy="3200" r="9" fill="#78B8D0" opacity="0.7"/>
+      <circle cx="500" cy="660" r="11" fill="#78B8D0" opacity="0.9" filter="url(#softGlow)"/>
+      <circle cx="360" cy="980" r="9" fill="#78B8D0" opacity="0.85"/>
+      <circle cx="700" cy="1290" r="9" fill="#78B8D0" opacity="0.85"/>
+      <circle cx="350" cy="1650" r="9" fill="#78B8D0" opacity="0.8"/>
+      <circle cx="700" cy="1980" r="9" fill="#78B8D0" opacity="0.8"/>
+      <circle cx="330" cy="2340" r="9" fill="#78B8D0" opacity="0.75"/>
+      <circle cx="700" cy="2680" r="9" fill="#78B8D0" opacity="0.75"/>
+      <circle cx="390" cy="2980" r="9" fill="#78B8D0" opacity="0.7"/>
 
       <!-- Summit flag -->
-      <line x1="500" y1="850" x2="500" y2="820" stroke="#C8E4EE" stroke-width="1.8"/>
-      <polygon points="500,820 524,828 500,836" fill="#78B8D0" opacity="0.85"/>
+      <line x1="500" y1="630" x2="500" y2="600" stroke="#C8E4EE" stroke-width="1.8"/>
+      <polygon points="500,600 524,608 500,616" fill="#78B8D0" opacity="0.85"/>
 
-      <text x="400" y="3440" font-family="'Cormorant Garamond',serif" font-size="14" fill="#4A7888" opacity="0.5" font-style="italic">The journey begins...</text>
+      <text x="400" y="3220" font-family="'Cormorant Garamond',serif" font-size="14" fill="#4A7888" opacity="0.5" font-style="italic">The journey begins...</text>
     </svg>
 
     <!-- ===== CLICKABLE STOP MARKERS ===== -->
 
-    <div class="stop-marker right" style="top:810px;left:52%" onclick="openDetail(0)" data-i="0">
+    <div class="stop-marker right" style="top:590px;left:52%" onclick="openDetail(0)" data-i="0">
       <div class="beacon">✦</div>
       <div class="mini-card">
         <div class="mc-company">Justworks <span class="now-badge">NOW</span></div>
@@ -787,7 +812,7 @@
       </div>
     </div>
 
-    <div class="stop-marker left" style="top:1130px;right:52%" onclick="openDetail(1)" data-i="1">
+    <div class="stop-marker left" style="top:910px;right:52%" onclick="openDetail(1)" data-i="1">
       <div class="beacon">✦</div>
       <div class="mini-card">
         <div class="mc-company">Amazon Prime Video</div>
@@ -797,7 +822,7 @@
       </div>
     </div>
 
-    <div class="stop-marker right" style="top:1440px;left:54%" onclick="openDetail(2)" data-i="2">
+    <div class="stop-marker right" style="top:1220px;left:54%" onclick="openDetail(2)" data-i="2">
       <div class="beacon">✦</div>
       <div class="mini-card">
         <div class="mc-company">Amazon Prime Video</div>
@@ -807,7 +832,7 @@
       </div>
     </div>
 
-    <div class="stop-marker left" style="top:1800px;right:54%" onclick="openDetail(3)" data-i="3">
+    <div class="stop-marker left" style="top:1580px;right:54%" onclick="openDetail(3)" data-i="3">
       <div class="beacon">✦</div>
       <div class="mini-card">
         <div class="mc-company">Bread Financial</div>
@@ -817,7 +842,7 @@
       </div>
     </div>
 
-    <div class="stop-marker right" style="top:2130px;left:53%" onclick="openDetail(4)" data-i="4">
+    <div class="stop-marker right" style="top:1910px;left:53%" onclick="openDetail(4)" data-i="4">
       <div class="beacon">✦</div>
       <div class="mini-card">
         <div class="mc-company">Deutsche Bank</div>
@@ -827,7 +852,7 @@
       </div>
     </div>
 
-    <div class="stop-marker left" style="top:2490px;right:54%" onclick="openDetail(5)" data-i="5">
+    <div class="stop-marker left" style="top:2270px;right:54%" onclick="openDetail(5)" data-i="5">
       <div class="beacon">✦</div>
       <div class="mini-card">
         <div class="mc-company">Interactive Data</div>
@@ -837,7 +862,7 @@
       </div>
     </div>
 
-    <div class="stop-marker right" style="top:2830px;left:54%" onclick="openDetail(6)" data-i="6">
+    <div class="stop-marker right" style="top:2610px;left:54%" onclick="openDetail(6)" data-i="6">
       <div class="beacon">✦</div>
       <div class="mini-card">
         <div class="mc-company">Barclays Capital</div>
@@ -847,7 +872,7 @@
       </div>
     </div>
 
-    <div class="stop-marker left" style="top:3130px;right:54%" onclick="openDetail(7)" data-i="7">
+    <div class="stop-marker left" style="top:2910px;right:54%" onclick="openDetail(7)" data-i="7">
       <div class="beacon">✦</div>
       <div class="mini-card">
         <div class="mc-company">Lehman Brothers</div>
